@@ -9,7 +9,7 @@ fun main() {
     podeSerNulo = null                           // Agora podemos atribuir o nulo sem problemas.
  
     var stringSemTipagem = "Esta string não possui tipagem" // Por padrão o kotlin atribui as variáveis como não nula, mesmo que não tenha sido tipada. Se tertarmos atribuir um valor nulo a ela, dará erro.
-    stringSemTipagem = null
+    // stringSemTipagem = null
 
     fun tamanhoString(semNulos: String): Int {
         return semNulos.length
