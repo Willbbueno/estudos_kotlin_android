@@ -4,6 +4,7 @@ fun main (){
     println(whenAssign(1))
     println(whenAssign(3.4))
     println(whenAssign(Myclass()))
+    println(whenAssign(true))
 
 
 }
