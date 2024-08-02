@@ -4,6 +4,9 @@ Loops - For
 
 Utilizam-se para repetir um bloco de código um número pré-determinado de vezes.
 A ideia primordial é percorrer cada elemento da lista (ou qualquer estrutura de dados) com os elementos passados.
+Ou seja, a quantidade de vezes que se repete é determinada previamente.file
+
+A diferença do for para while é que o while repete até que uma condição seja realizada.
 
 */
 
