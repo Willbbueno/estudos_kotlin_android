@@ -12,7 +12,8 @@ fun main() {
     cases("Hello")
     cases(1)
     cases(0L)
-    cases("hello")
+    cases("William")
+    
 }
 
 fun cases(obj: Any) {           // A ideia desta função e do when statement é receber os valores e imprimir o resultado das conficionais.
@@ -20,10 +21,10 @@ fun cases(obj: Any) {           // A ideia desta função e do when statement é
         1 -> println("One")
         "Hello" -> println("Greeting")
         is Long -> println("É do tipo Long")
-        !is String -> println("Não é uma string")
+        is String -> println("É uma string")
         else -> println("Desconhecido")
 
-    }
+    } 
     
 }  
 
