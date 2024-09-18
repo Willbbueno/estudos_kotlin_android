@@ -14,16 +14,16 @@ Utilizado par armazenar identificadores únicos para associar dados, contar ocor
 
 class CadastroDeClientes {
 
-    val cpfCliente: MutableMap<String, String> = mutableMapOf(nome to cpf) 
-    val cpfListaNegra: Set<String> = setOf("35645678579","23548675912")
-
+    val cpfCliente: MutableMap<String, String> = mutableMapOf() // Inciamos com uma variável map vazia que armazenará os dados com as chave-valor.
+    val cpfListaNegra: Set<String> = setOf("35645678579","23548675912") // Crie uma variável que serve como lista negra para cpfs que não podem ser cadastrados.
+    
     fun inserirCadastro(nome: String, cpf: String) {
         if (cpf in cpfListaNegra) {
 
-            println("Este cpf não pode ser cadastrado, informe a gerênria.")
+            println("Este cpf não pode ser cadastrado, informe a gerência.")
         }
         else {
-            cpfCliente.add(nome, cpf)
+            cpfCliente.put(cpf, nome)
             println("Cliente $nome cadastrado.")
         }
     }
@@ -38,15 +38,15 @@ class CadastroDeClientes {
         println("Lista dos clientes cadastrados: $cpfCliente")
         return cpfCliente
     }
+        */
 }
-*/
+
 fun main() {
     val cadastroDeClientes = CadastroDeClientes()
 
     cadastroDeClientes.inserirCadastro("William","12345678941")
     cadastroDeClientes.inserirCadastro("Ingrid","98765432145")
     cadastroDeClientes.inserirCadastro("Roberto","35645678579")
-
-    //cadastroDeClientes.consultarNaLista("Jorge","123456789")
+    println(cadastroDeClientes.cpfCliente)
     
 }

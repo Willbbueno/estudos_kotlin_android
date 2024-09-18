@@ -38,16 +38,12 @@ class CadastroDeClientes {
         }
     }
 
-    fun consultarNaLista(nome: String, cpf: String): Boolean {
+    fun consultarNaLista(nome: String, cpf: String): Boolean {  // Esta função foi criada apenas como estudo, o ideal seria utilizar uma Maplist para associar cada nome ao cpf.
         if (cpf !in cpfCliente) println("Cliente $cpf não cadastrado.") else println("Cliente $cpf cadastrado")
 
         return cpf in cpfCliente
     }
 
-    fun mostrarCadastro(): Set<String> {
-        println("Lista dos clientes cadastrados: $cpfCliente")
-        return cpfCliente
-    }
 }
 
 fun main() {
